@@ -1,21 +1,20 @@
 {% extends 'skeleton.html' %}
 {% load static %}
 {% block contents %}
-    <div class="w-[90%] md:w-[65%] mx-auto grid grid-cols-1  py-10">
-               <!-- current Resume-->
-                <div class="bg-[white] shadow-2xl space-y-2 py-4 px-4 rounded-2xl">
-                    <img src="{% static '/assets/mohanresume.png' %}" alt="no resume "height='400px' width="600px"class="block mx-auto " >
-                    <a id="resumeLink">
-                        <div class="flex flex-row justify-between">
-                            <button class="bg-green-600 rounded-2xl text-[white] px-2.5 text-[22px] font-bold flex flex-row py-1.5 ml-5  mb-2 items-center gap-1 hover:bg-green-700">View Resume →</button>
-                        </div>
-                    </a>
-                </div>
+    <div class="w-[30%] md:w-[30%] mx-auto grid grid-cols-1  py-10">
+        <div class="bg-[white] shadow-2xl space-y-2 py-4 px-4 rounded-2xl ">
+            <p class="font-[Satoshi Regular] text-[18px] leading-[28px] text-black font-normal flex justify-center align-center"> - Resume - </p>
+            <div class="flex flex-row justify-between">
+                <button class="bg-green-600 rounded-lg text-[white] px-2 flex flex-row py-1  items-center gap-1 hover:bg-green-700" id="resumeLink">
+                    Live Link
+                </button>
+            </div>
+        </div>
     </div>
     <script>
         let resume = document.getElementById("resumeLink")
         resume.addEventListener("click", function () {
-            window.open("{% static 'assets/mohan resume.pdf' %}", "_blank");
+            window.open("{{ 'https://ik.imagekit.io/9jskk4vct8/portfolio%20assests/Mohan%20kumar%20N%20(2).pdf' }}", "_blank");
         });
     </script>
 {% endblock %}
